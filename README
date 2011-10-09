@@ -15,6 +15,8 @@ METHOD 1: DO-IT-YOURSELF METHOD
 
 METHOD 1: CHILLAX METHOD
 1) The comics folder you see in this repo has comics from 1 to 961 (The latest at the time of the commit). So just run viewer.php and you should be able to see all comics from 1 to 961.
+2) Create a New MySQL DB named 'xkcd' then import the comix.sql file into it to fill it.
+3) Run viewer.php and enjoy! :)
 
 KEYBOARD SHORTCUTS:
 p -Previous Comic
