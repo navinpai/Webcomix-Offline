@@ -4,13 +4,13 @@ How to Use
 ----------
 Ensure MySQL and PHP are working... I Use LAMPP on Linux and WAMPP on Windows.
 
-METHOD 1: DO-IT-YOURSELF METHOD
-1) Create folder comics in the same directory as xkcd.php and give it Read/Write priviledges to Everyone.
-2) Run xkcd.php ... It will take some time, but you will see the Comics folder filling up with images and the MySQL table filling up with details
+METHOD 1: DO-IT-YOURSELF METHOD (You only need xkcd.php and viewer.php for this)
+1) Create folder named 'comics' in the same directory as xkcd.php and give it Read/Write priviledges to Everyone.
+2) Run xkcd.php ... It will take some time, but you will see the 'comics' folder filling up with images and the MySQL table filling up with details
 3) Run viewer.php ... By default, it will start with the latest comic (just like XKCD)
 4) Use the Keyboard shortcuts listed below to navigate (or the mouse, if you wish).
 
-METHOD 1: CHILLAX METHOD
+METHOD 1: CHILLAX METHOD (You need all folders/files in this repo for this)
 1) The comics folder you see in this repo has comics from 1 to 961 (The latest at the time of the commit). So just run viewer.php and you should be able to see all comics from 1 to 961.
 2) Create a New MySQL DB named 'xkcd' then import the comix.sql file into it to fill it.
 3) Run viewer.php and enjoy! :)
