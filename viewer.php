@@ -20,7 +20,18 @@ else
 $q=$comiccount['count(id)'];
 echo '<div id="main_container" align="center">';
 if($q < 1 || $q >$comiccount['count(id)'])
+{
 echo '<br/><br/><br/><h1>NOT AVAILABLE</h1>';
+echo '<div class="main_title" align="center"><h1/></div><br/>';
+$nextpath='<a href="?q='.$comiccount['count(id)'].'">LATEST</a>';
+$prevpath='<a href="?q=1">FIRST</a>';
+echo '<div class="left_content" align="left"><p>';
+echo $prevpath;
+echo '</p></div>';
+echo '<div class="right_content" align="right"><p>';
+echo $nextpath;
+echo '</p></div>';
+}
 else
 {
 $result=  mysql_query("SELECT * FROM comix where id=$q");
@@ -42,8 +53,6 @@ if($q==404)
 echo '<p align="center">XKCD HAS NO COMIC #404 ... DID U KNOW THAT?</p>';
 else
 echo $picshow;
-}
-echo '<br/><br/><div class="footer" align="center">XKCD Archive | An Archive of '.$comiccount['count(id)'].' XKCD Comics<br/>'."&copy;".' R[o]b[o] Zombie Productions</div></div>'; 
 echo '<script type="text/javascript">
 
 function init() {
@@ -58,7 +67,10 @@ shortcut.add("Space", function() {
 	});	
 }
 window.onload=init;
-</script>'
+</script>';
+}
+echo '<br/><br/><div class="footer" align="center">XKCD Archive | An Archive of '.$comiccount['count(id)'].' XKCD Comics<br/>'."&copy;".' R[o]b[o] Zombie Productions</div></div>'; 
+
 ?>
 </body>
 </html>
