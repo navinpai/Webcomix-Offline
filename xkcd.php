@@ -5,10 +5,20 @@ if (!$con)
   {
   die('Could not connect: ' . mysql_error());
   }
+mysql_query("CREATE DATABASE xkcd",$con);
 
 mysql_select_db("xkcd", $con);
 
-//INITIAL cURL
+$sql = "CREATE TABLE comix
+(
+id int(11) NOT NULL ,
+picid TEXT NOT NULL,
+title TEXT NOT NULL,
+alttext TEXT NOT NULL
+)";
+mysql_query($sql,$con);
+
+//INITIAL cURL to find which is latest XKCD
 $myurl= 'http://xkcd.com/';
 $ch = curl_init($myurl);
 curl_setopt($ch, CURLOPT_URL, $myurl);
