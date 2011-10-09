@@ -1,0 +1,27 @@
+XKCD-Offline simply downloads all XKCD comics (http://www.xkcd.com) from 1st to latest (It checks which is the latest comic before starting to download comics).
+
+How to Use
+----------
+METHOD 1: DO-IT-YOURSELF METHOD
+1) Set up a MySQL database named 'xkcd' and a table named 'comix' along with 4 coloumns
+    id (int(11))
+    picid (text)
+    title (text)
+    alttext (text)
+2) Create folder comics in the same directory as xkcd.php and give it Read/Write priviledges to Everyone.
+3) Run xkcd.php ... It will take some time, but you will see the Comics folder filling up with images and the MySQL table filling up with details
+4) Run viewer.php ... By default, it will start with the latest comic (just like XKCD)
+5) Use the Keyboard shortcuts listed below to navigate (or the mouse, if you wish).
+
+METHOD 1: CHILLAX METHOD
+1) The comics folder you see in this repo has comics from 1 to 961 (The latest at the time of the commit). So just run viewer.php and you should be able to see all comics from 1 to 961.
+
+KEYBOARD SHORTCUTS:
+p -Previous Comic
+n -Next Comic
+Space - Scroll Down by 100px (For those looong XKCDs we all love! :))
+
+Written in PHP, and makes extensive use of PHP-curl, along with bits of MySQL.
+
+RANDOM FACT: There is No XKCD #404 .... Coz http://xkcd.com/404/ is the 404 error page of the site! :)
+
