@@ -15,9 +15,9 @@ mysql_select_db("xkcd", $con);
 
 $count=mysql_query("SELECT count(id) FROM comix");
 $comiccount = mysql_fetch_array($count) or die(mysql_error());
-$q=$_GET['q'];
-if($q==NULL)
-$q=$comiccount;
+if(isset($_GET['q'])) $q=$_GET['q'];
+else
+$q=$comiccount['count(id)'];
 echo '<div id="main_container" align="center">';
 if($q < 1 || $q >$comiccount['count(id)'])
 echo '<br/><br/><br/><h1>NOT AVAILABLE</h1>';
