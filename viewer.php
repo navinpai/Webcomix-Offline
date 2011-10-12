@@ -65,6 +65,9 @@ shortcut.add("n", function() {
 shortcut.add("Space", function() {
 		window.scrollBy(0,100);
 	});	
+shortcut.add("b", function() {
+		window.scrollBy(0,-100);
+	});	
 }
 window.onload=init;
 </script>';
